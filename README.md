@@ -25,7 +25,7 @@ JOIN customer c ON st.store_id = c.store_id
 GROUP BY st.store_id, staff_name, ci.city
 HAVING COUNT(c.customer_id) > 300;
 ```
-![image 1](png/1.ppg)
+![image 1](png/1.png)
 
 ### Задание 2
 
@@ -36,7 +36,7 @@ SELECT COUNT(*) AS movie_count
 FROM film
 WHERE length > (SELECT AVG(length) FROM film);
 ```
-![image 2](png/2.ppg)
+![image 2](png/2.png)
 ### Задание 3
 
 Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
@@ -53,7 +53,7 @@ GROUP BY payment_month
 ORDER BY total_payments DESC
 LIMIT 1;
 ```
-![image 3](png/3.ppg)
+![image 3](png/3.png)
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
 ### Задание 4*
@@ -74,7 +74,7 @@ JOIN payment p ON s.staff_id = p.staff_id
 GROUP BY s.staff_id, s.first_name, s.last_name
 ORDER BY count_sales DESC;  
 ```
-![image 4](png/4.ppg)
+![image 4](png/4.png)
 ### Задание 5*
 
 Найдите фильмы, которые ни разу не брали в аренду.
